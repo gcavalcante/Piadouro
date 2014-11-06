@@ -1,0 +1,27 @@
+{% extends "piadouro_website/base.html" %}
+
+{% block content %}
+  <div id="user_info" align="left">
+    <a href="/users/{{ u.username }}/">@{{ u.username }}</a>
+    <i>{{ u.first_name }} {{ u.last_name }}</i>
+    <br>
+    <i>{{ u.email }}</i>
+    <br>
+    Joined: {{ u.date_joined }}
+    {% if followed %}
+    <form action="follow" method="get">
+      <input type="submit" name="Follow" value="Unfollow" />
+    </form>
+    {% else %}
+    <form action="follow" method="get">
+      <input type="submit" name="Follow" value="Follow" />
+    </form> 
+    {% endif %}
+  </div> 
+  <div style="padding:40px;">
+  {% for piado in piados %}
+    <li style="color:{% cycle 'blue' 'green' %}">{{ piado.text }}</li>
+  {% endfor %}
+  </div>
+{% endblock %}
+

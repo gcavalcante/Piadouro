@@ -1,0 +1,17 @@
+1 - Visao de usuario -> Criar View para termos visao dos piados de um usuario (e.g /users/gabriel/)
+    * Esta view precisa ter o botao de follow
+    * Alternar entre o botao de follow/unfollow
+    * qtd de follows/followers (link -> followers)
+    * qtd de piados
+1.1 - Mostrar listagem dos seguidores/seguidos (eg. /users/gabriel/followers/)
+
+2 - Listar na Home do usuario somente os piados dos usuarios que ele segue
+    * Essa listagem deve ter links para o piados e para os usuarios
+
+3 - Criar view especifica para o piado
+  * Botao para apagar o piado
+  * editar o piado
+
+4 - Adicionar bootstrap para embelezar nosso webapp
+
+5 - Data e hora de um piado?

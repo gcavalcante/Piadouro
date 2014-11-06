@@ -1,0 +1,13 @@
+{% extends "piadouro_website/base.html" %}
+
+{% block content %}
+
+  {% for piado in piados %}
+    <div style="padding:10px;">
+    <a href="/users/{{ piado.user_username }}/">@{{ piado.user__username }}</a>
+    <li style="color:{% cycle 'blue' 'green' %}">{{ piado.text }}</li>
+    </div>
+  {% endfor %}
+
+{% endblock %}
+

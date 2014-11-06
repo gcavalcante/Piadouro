@@ -1,0 +1,16 @@
+{% extends "piadouro_website/base.html" %}
+
+{% block content %}
+
+  {% for u in users %}
+   <div id="user_info" style="padding:10px;" align="left">
+    <a href="/users/{{ u.username }}/">@{{ u.username }}</a>
+    <i>{{ u.first_name }} {{ u.last_name }}</i>
+    <br>
+    <i>{{ u.email }}</i>
+    <br>
+    Joined: {{ u.date_joined }}
+  </div> 
+  {% endfor %}
+{% endblock %}
+
