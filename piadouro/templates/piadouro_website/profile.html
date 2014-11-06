@@ -11,7 +11,7 @@
     <br>
     <i>Followers: {{ amount_followers }}</i>
     <br>
-    <i>Followeds: {{ amount_followeds }}</i>
+    <i>Follows: {{ amount_followeds }}</i>
     <br>
 
     {% if followed %}
@@ -21,13 +21,12 @@
     {% else %}
     <form action="follow" method="get">
       <input type="submit" name="Follow" value="Follow" />
-    </form> 
+    </form>
     {% endif %}
-  </div> 
+  </div>
   <div style="padding:40px;">
   {% for piado in piados %}
     <li style="color:{% cycle 'blue' 'green' %}">{{ piado.text }}</li>
   {% endfor %}
   </div>
 {% endblock %}
-
