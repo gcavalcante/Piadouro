@@ -14,8 +14,8 @@ from django.contrib.auth.models import User
 @login_required
 def home(request):
   followed_ids = Follow.objects.filter(follower_user=request.user).values_list('followed_user')
-  my_piados = Piado.objects.filter(user=request.user).values('user__username','text')
-  piados = Piado.objects.filter(user__in=followed_ids).values('user__username','text')
+  my_piados = Piado.objects.filter(user=request.user).values('user__username','text', 'date_time')
+  piados = Piado.objects.filter(user__in=followed_ids).values('user__username','text', 'date_time')
   piados = piados | my_piados
   return render_to_response("piadouro_website/home.html", 
                   { "piados" : piados, 'user':request.user})

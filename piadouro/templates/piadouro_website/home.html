@@ -4,8 +4,12 @@
 
   {% for piado in piados %}
     <div style="padding:10px;">
+    
+    
     <a href="/users/{{ piado.user__username }}">@{{ piado.user__username }}</a>
     <li style="color:{% cycle 'blue' 'green' %}">{{ piado.text }}</li>
+    <small>Piado em: {{ piado.date_time }}</small>
+   
     </div>
   {% endfor %}
 
