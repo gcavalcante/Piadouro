@@ -4,7 +4,7 @@
 
   {% for piado in piados %}
     <div style="padding:10px;">
-    <a href="/users/{{ piado.user_username }}/">@{{ piado.user__username }}</a>
+    <a href="/users/{{ piado.user__username }}">@{{ piado.user__username }}</a>
     <li style="color:{% cycle 'blue' 'green' %}">{{ piado.text }}</li>
     </div>
   {% endfor %}

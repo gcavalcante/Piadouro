@@ -8,6 +8,12 @@
     <i>{{ u.email }}</i>
     <br>
     Joined: {{ u.date_joined }}
+    <br>
+    <i>Followers: {{ amount_followers }}</i>
+    <br>
+    <i>Followeds: {{ amount_followeds }}</i>
+    <br>
+
     {% if followed %}
     <form action="follow" method="get">
       <input type="submit" name="Follow" value="Unfollow" />

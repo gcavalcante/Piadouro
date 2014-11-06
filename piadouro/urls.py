@@ -6,7 +6,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     #Piados and home page
     url(r'^$', 'piadouro_website.views.home', name='home'),     
-    url(r'^mypiados$', 'piadouro_website.views.mypiados', name='mypiados'),        
+    url(r'^mypiados/$', 'piadouro_website.views.mypiados', name='mypiados'),        
     url(r'^newpiado/$', 'piadouro_website.views.piado_add', name='new_piado'),    
     #Users pages
     url(r'^users/$', 'piadouro_website.views.users', name='users'),    

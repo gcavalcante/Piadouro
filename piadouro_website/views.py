@@ -50,7 +50,11 @@ def profile(request,username):
   followed= len(Follow.objects.filter(followed_user__username=username,
                                        follower_user=request.user)) > 0
   return render(request,"piadouro_website/profile.html",{'u':user,'piados':piados, 
-                                                          'followed': followed})
+                                                          'followed': followed,
+                                                          'amount_followeds': len(Follow.objects.filter(follower_user__username=username,
+                                                                                 follower_user=request.user)),
+                                                          'amount_followers': len(Follow.objects.filter(followed_user__username=username,
+                                                                                 followed_user=request.user))})
 
 
 @login_required
